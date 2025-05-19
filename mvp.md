@@ -1,5 +1,5 @@
 # MVP Plan
-*(Due May 14)*
+*(Due May 14, 2023)*
 - ~~**City Hall:** Objective of Everythingville, how to navigate with pictures~~
 - ~~**House:** Journal with save feature~~
 - _~~**School:** 1 math article (financial literacy), 1 science article (giant pandas), 1 social studies article (branches of government), 1 language arts article (parts of speech)~~_
