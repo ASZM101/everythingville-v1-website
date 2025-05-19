@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Everythingville Restaurant</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="images/map.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="restaurant">
+  <nav id="nav">
+    <a href="index.html"><img src="images/map.png" id="logo" alt="Map"></a>
+    <a class="navA" href="cityHall.html">City Hall</a>
+    <a class="navA" href="home.html">Home</a>
+    <a class="navA" href="school.html">School</a>
+    <a class="navA selected" href="restaurant.html">Restaurant</a>
+    <a class="navA" href="gym.html">Gym</a>
+    <a class="navA" href="library.html">Library</a>
+    <a class="navA" href="museum.html">Museum</a>
+    <a class="navA" href="musicStore.html">Music Store</a>
+    <a class="navA" href="arcade.html">Arcade</a>
+    <a class="navA" href="zoo.html">Zoo</a>
+    <a href="javascript:void(0);" class="icon" onclick="compactNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  
+  <section id="restaurantSection">
+    <p id="top"></p>
+    <h1>Welcome to the Restaurant!</h1>
+    <hr>
+    <p>What would you like to make today?</p>
+    <a href="#top"><button class="recipes" id="breakfast" onclick="breakfastFunc()">Breakfast</button></a>
+    <a href="#top"><button class="recipes" id="lunch" onclick="lunchFunc()">Lunch</button>
+    <a href="#top"><button class="recipes" id="dinner" onclick="dinnerFunc()">Dinner</button></a>
+    <a href="#top"><button class="recipes" id="dessert" onclick="dessertFunc()">Dessert</button></a>
+    <a href="#top"><button class="recipes" id="goBackRestaurant" style="display:none" onclick="goBackRestaurantFunc()">Go Back</button></a>
+    <br>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

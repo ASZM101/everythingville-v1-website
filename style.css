@@ -1,0 +1,613 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body{
+  font-family: Futura, Avenir, Gill Sans, Calibri, Helvetica, Verdana, Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+section{
+  background-color: rgba(255, 255, 255, 0.75);
+  background-attachment: scroll;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  margin: 0px;
+}
+#mapSection{
+  background-color: rgba(255, 255, 255, 0);
+}
+body.map{
+  background: scroll repeat center/15% url("images/grass.png");
+}
+body.cityHall{
+  background: fixed no-repeat center/cover url("images/cityHallBkgd.JPG");
+}
+body.home{
+  background: fixed no-repeat center/cover url("images/homeBkgd.JPG");
+}
+body.school{
+  background: fixed no-repeat center/cover url("images/schoolBkgd.JPG");
+}
+body.restaurant{
+  background: fixed no-repeat center/cover url("images/restaurantBkgd.JPG");
+}
+body.gym{
+  background: fixed no-repeat center/cover url("images/gymBkgd.PNG");
+}
+body.library{
+  background: fixed no-repeat center/cover url("images/libraryBkgd.JPG");
+}
+body.museum{
+  background: fixed no-repeat center/cover url("images/museumBkgd.JPG");
+}
+body.musicStore{
+  background: fixed no-repeat center/cover url("images/musicStoreBkgd.JPG");
+}
+body.zoo{
+  background: fixed no-repeat center/cover url("images/zooBkgd.JPG");
+}
+body.arcade{
+  background: fixed no-repeat center/cover url("images/arcadeBkgd.JPG");
+}
+h1, h2, h3, p{
+  text-align: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+h1{
+  font-size: 36px;
+}
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 24px;
+}
+p{
+  font-size: 18px;
+}
+li{
+  font-size: 18px;
+  margin: 10px 50px;
+}
+a{
+  text-decoration: none;
+}
+#top{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+  height: 0px;
+}
+hr{
+  border: 1px solid black;
+  width: 75vw;
+}
+textarea{
+  display: block;
+  margin: auto;
+  min-width: 80vw;
+  min-height: 40vh;
+  font-family: Futura, Avenir, Gill Sans, Calibri, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 15px;
+}
+#music{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#music > *{
+  margin: 20px;
+}
+img.schoolPics{
+  max-width: 75vw;
+  max-height: 300px;
+  display: block;
+  margin: auto;
+  padding: 10px 50px;
+}
+button{
+  text-align: center;
+  display: block;
+  margin: auto;
+  min-width: 150px;
+  font-family: Futura, Avenir, Gill Sans, Calibri, Helvetica, Verdana, Arial, sans-serif;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: none;
+  transition: all 0.5s ease;
+}
+button.schoolArticles{
+  margin: 10px auto;
+}
+#math{
+  background-color: #4f90ff;
+  border: 1px solid #4f90ff;
+  color: black;
+}
+#sci{
+  background-color: #34eb6b;
+  border: 1px solid #34eb6b;
+  color: black;
+}
+#ss{
+  background-color: #c055fa;
+  border: 1px solid #c055fa;
+  color: black;
+}
+#ela{
+  background-color: #ff4f4f;
+  border: 1px solid #ff4f4f;
+  color: black;
+}
+#math:hover{
+  background-color: #0033c4;
+  border: 1px solid #0033c4;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#sci:hover{
+  background-color: #008d0d;
+  border: 1px solid #008d0d;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#ss:hover{
+  background-color: #7a0098;
+  border: 1px solid #7a0098;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#ela:hover{
+  background-color: #b00800;
+  border: 1px solid #b00800;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#goBackSchool{
+  background-color: #fdc700;
+  border: 1px solid #fdc700;
+  color: black;
+}
+#goBackSchool:hover{
+  background-color: #b57700;
+  border: 1px solid #b57700;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+button.recipes{
+  margin: 10px auto;
+}
+#breakfast{
+  background-color: #4f90ff;
+  border: 1px solid #4f90ff;
+  color: black;
+}
+#lunch{
+  background-color: #34eb6b;
+  border: 1px solid #34eb6b;
+  color: black;
+}
+#dinner{
+  background-color: #c055fa;
+  border: 1px solid #c055fa;
+  color: black;
+}
+#dessert{
+  background-color: #ff4f4f;
+  border: 1px solid #ff4f4f;
+  color: black;
+}
+#breakfast:hover{
+  background-color: #0033c4;
+  border: 1px solid #0033c4;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#lunch:hover{
+  background-color: #008d0d;
+  border: 1px solid #008d0d;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#dinner:hover{
+  background-color: #7a0098;
+  border: 1px solid #7a0098;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#dessert:hover{
+  background-color: #b00800;
+  border: 1px solid #b00800;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#goBackRestaurant{
+  background-color: #fdc700;
+  border: 1px solid #fdc700;
+  color: black;
+}
+#goBackRestaurant:hover{
+  background-color: #b57700;
+  border: 1px solid #b57700;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+div.journalBtns{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#saveJournal{
+  display: inline-block;
+  margin: 15px;
+  background-color: #75d1ff;
+  border: 1px solid #005bbd;
+  box-shadow: none;
+  color: black;
+  transition: all 0.5s ease;
+}
+#saveJournal:hover{
+  background-color: #005bbd;
+  border: 1px solid #005bbd;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#resetJournal{
+  display: inline-block;
+  margin: 15px;
+  background-color: #ffe74d;
+  border: 1px solid #ad7f00;
+  box-shadow: none;
+  color: black;
+  transition: all 0.5s ease;
+}
+#resetJournal:hover{
+  background-color: #ad7f00;
+  border: 1px solid #ad7f00;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+nav{
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  background-color: #87CEEB;
+  width: 100vw;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
+}
+a.navA{
+  text-decoration: none;
+  color: #00008b;
+  font-size: 20px;
+  background-color: #87CEEB;
+  transition: all 0.5s ease;
+  padding: 24px 10px;
+}
+a.navA:hover{
+  color: #87CEEB;
+  background-color: #00008b;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+a.selected{
+  color: #87CEEB;
+  background-color: #00008b;
+}
+#logo{
+  width: 50px;
+  height: 50px;
+}
+section{
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 50px;
+}
+a.icon{
+  color: #00008b;
+  display: none;
+}
+/* #ground{
+  display: block;
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 75px;
+  left: 0px;
+  z-index: 1;
+} */
+img.buildings{
+  width: 12vw;
+  height: 12vw;
+  position: absolute;
+  z-index: 2;
+  border-bottom: none;
+  opacity: 1;
+  transition: border-bottom 0.5s ease-out;
+}
+img.incomplete{
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+img.buildings:hover{
+  cursor: pointer;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+img.incomplete:hover{
+  cursor: not-allowed;
+  opacity: 0.5;
+  border-bottom: none;
+  transition: all 0.5s ease;
+}
+img.buildings-modal{
+  width: 12vw;
+  height: 12vw;
+  z-index: 4;
+  display: block;
+  margin: auto;
+}
+#cityHallBuilding{
+  top: 12vh;
+  left: 44vw;
+}
+#homeBuilding{
+  top: 12vh;
+  left: 19vw;
+}
+#schoolBuilding{
+  top: 12vh;
+  left: 68vw;
+}
+#restaurantBuilding{
+  top: 53vh;
+  left: 8vw;
+}
+#gymBuilding{
+  top: 53vh;
+  left: 33vw;
+}
+#libraryBuilding{
+  top: 53vh;
+  left: 57vw;
+}
+#museumBuilding{
+  top: 53vh;
+  left: 80vw;
+}
+#musicStoreBuilding{
+  top: 92vh;
+  left: 44vw;
+}
+#arcadeBuilding{
+  top: 92vh;
+  left: 19vw;
+}
+#zooBuilding{
+  top: 92vh;
+  left: 68vw;
+}
+div.modal{
+  display: none;
+  position: fixed;
+  z-index: 4;
+  padding-top: 10vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  overflow: auto;
+}
+div.modalContent {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  width: 80%;
+  height: 60vh;
+  overflow: auto;
+  display: block;
+}
+div.modalContent > *:not(:first-child){
+  text-align: center;
+}
+button.mapBtn{
+  text-align: center;
+  display: grid;
+  margin: auto;
+  width: 150px;
+  background-color: #75ed00;
+  font-family: Futura, Avenir, Gill Sans, Calibri, Helvetica, Verdana, Arial, sans-serif;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #75ed00;
+  text-decoration: none;
+  color: black;
+  box-shadow: none;
+  transition: all 0.5s ease;
+}
+button.mapBtn:hover{
+  background-color: #52a300;
+  border: 1px solid #52a300;
+  color: white;
+  box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+a.mapA{
+  text-align: center;
+  display: grid;
+  margin: auto;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+span.close {
+  color: #ff0000;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+  position: absolute;
+  right: 10vw;
+}
+span.close:hover, span.close:focus {
+  color: #850000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1100px){
+  section{
+    height: 177vw;
+  }
+  nav{
+    height: 60px;
+  }
+  #logo{
+    width: 40px;
+    height: 40px;
+  }
+  nav a:nth-child(2), nav a:nth-child(3), nav a:nth-child(4), nav a:nth-child(5), nav a:nth-child(6), nav a:nth-child(7), nav a:nth-child(8), nav a:nth-child(9), nav a:nth-child(10), nav a:nth-child(11){
+    display: none;
+  }
+  a.icon{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+  }
+  nav.responsive{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: clipped;
+    position: absolute;
+  }
+  nav.responsive #logo{
+    margin-top: 20px;
+  }
+  nav.responsive a{
+    display: block;
+    font-size: 15px;
+    margin: auto;
+    padding: 0px;
+  }
+  nav.responsive a.icon{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    margin: auto;
+  }
+  nav.responsive a:nth-child(2), nav.responsive a:nth-child(3), nav.responsive a:nth-child(4), nav.responsive a:nth-child(5), nav.responsive a:nth-child(6), nav.responsive a:nth-child(7), nav.responsive a:nth-child(8), nav.responsive a:nth-child(9), nav.responsive a:nth-child(10), nav.responsive a:nth-child(11){
+    width: 100vw;
+    text-align: center;
+    margin: 10px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* div.modal{
+    height: calc(100% + 60px);
+  } */
+  /* #ground{
+    top: 50px;
+  } */
+  img.buildings{
+    width: 23vw;
+    height: 23vw;
+    position: absolute;
+  }
+  img.buildings-modal{
+    width: 23vw;
+    height: 23vw;
+  }
+  #cityHallBuilding{
+    top: 24vw;
+    left: 38vw;
+  }
+  #homeBuilding{
+    top: 46vw;
+    left: 2vw;
+  }
+  #schoolBuilding{
+    top: 46vw;
+    left: 75vw;
+  }
+  #restaurantBuilding{
+    top: 90vw;
+    left: 2vw;
+  }
+  #gymBuilding{
+    top: 68vw;
+    left: 38vw;
+  }
+  #libraryBuilding{
+    top: 90vw;
+    left: 75vw;
+  }
+  #museumBuilding{
+    top: 134vw;
+    left: 2vw;
+  }
+  #musicStoreBuilding{
+    top: 110vw;
+    left: 38vw;
+  }
+  #arcadeBuilding{
+    top: 134vw;
+    left: 75vw;
+  }
+  #zooBuilding{
+    top: 155vw;
+    left: 38vw;
+  }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Everythingville Map</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="image/png" href="images/map.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="map">
+  <nav id="nav">
+    <a href="index.html"><img src="images/map.png" id="logo" class="selected" alt="Map"></a>
+    <a class="navA" href="cityHall.html">City Hall</a>
+    <a class="navA" href="home.html">Home</a>
+    <a class="navA" href="school.html">School</a>
+    <a class="navA" href="restaurant.html">Restaurant</a>
+    <a class="navA" href="gym.html">Gym</a>
+    <a class="navA" href="library.html">Library</a>
+    <a class="navA" href="museum.html">Museum</a>
+    <a class="navA" href="musicStore.html">Music Store</a>
+    <a class="navA" href="arcade.html">Arcade</a>
+    <a class="navA" href="zoo.html">Zoo</a>
+    <a href="javascript:void(0);" class="icon" onclick="compactNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  
+  <section id="mapSection">
+    <!-- <img src="images/ground-horizontal.png" class="bkgds ground-horizontal" id="ground" alt="Ground"> -->
+    <p id="top"></p>
+    
+    <a href="#top"><img src="images/cityHall.png" class="buildings" id="cityHallBuilding" alt="City Hall" onclick="cityHallBuildingFunc()"></a>
+    <div id="cityHallModal" class="modal">
+      <div class="modalContent">
+        <span id="cityHallClose" class="close" onclick="cityHallCloseFunc()">&times</span>
+        <h2>City Hall</h2>
+        <img src="images/cityHall.png" class="buildings-modal" alt="City Hall">
+        <!-- <p>In the City Hall, you can find out more about this site, learn how to navigate Everythingville, read more about all of the features and locations, stay up-to-date with any latest updates, and see the current date and time.</p> -->
+        <p>In the City Hall, you can find out more about this site and learn how to navigate Everythingville.</p>
+        <p><b>Do you want to go to the City Hall?</b></p>
+        <a id="cityHallA" class="mapA" href="cityHall.html"><button id="cityHallBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+    
+    <a href="#top"><img src="images/home.png" class="buildings" id="homeBuilding" alt="Home" onclick="homeBuildingFunc()"></a>
+    <div id="homeModal" class="modal">
+      <div class="modalContent">
+        <span id="homeClose" class="close" onclick="homeCloseFunc()">&times</span>
+        <h2>Home</h2>
+        <img src="images/home.png" class="buildings-modal" alt="Home">
+        <!-- <p>In your Home, you can write in a journal about anything, draw pictures and doodles, and create a to-do list to organize your day.</p> -->
+        <p>In your Home, you can write in a journal about anything.</p>
+        <p><b>Do you want to go your Home?</b></p>
+        <a id="homeA" class="mapA" href="home.html"><button id="homeBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+
+    <a href="#top"><img src="images/school.png" class="buildings incomplete" id="schoolBuilding" alt="School" onclick="schoolBuildingFunc()"></a>
+    <div id="schoolModal" class="modal">
+      <div class="modalContent">
+        <span id="schoolClose" class="close" onclick="schoolCloseFunc()">&times</span>
+        <h2>School</h2>
+        <img src="images/school.png" class="buildings-modal" alt="School">
+        <!-- <p>In the School, you can read articles about various topics, explore lesson slideshows for different subjects, take quizzes to test your knowledge, and use and make your own flashcards to study.</p> -->
+        <p>In the School, you can read articles about various topics.</p>
+        <p><b>Do you want to go to the School?</b></p>
+        <a id="schoolA" class="mapA" href="school.html"><button id="schoolBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+
+    <a href="#top"><img src="images/restaurant.png" class="buildings incomplete" id="restaurantBuilding" alt="Restaurant" onclick="restaurantBuildingFunc()"></a>
+    <div id="restaurantModal" class="modal">
+      <div class="modalContent">
+        <span id="restaurantClose" class="close" onclick="restaurantCloseFunc()">&times</span>
+        <h2>Restaurant</h2>
+        <img src="images/restaurant.png" class="buildings-modal" alt="Restaurant">
+        <!-- <p>In the Restaurant, you can take a look at a variety of recipes that include a list of all the ingredients that you need and step-by-step instructions for how to make them.</p> -->
+        <p>In the Restaurant, you can take a look at a variety of recipes that include a list of all the ingredients that you need and step-by-step instructions for how to make them.</p>
+        <p><b>Do you want to go to the Restaurant?</b></p>
+        <a id="restaurantA" class="mapA" href="restaurant.html"><button id="restaurantBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+
+    <a href="#top"><img src="images/gym.png" class="buildings incomplete" id="gymBuilding" alt="Gym" onclick="gymBuildingFunc()"></a>
+    <div id="gymModal" class="modal">
+      <div class="modalContent">
+        <span id="gymClose" class="close" onclick="gymCloseFunc()">&times</span>
+        <h2>Gym</h2>
+        <img src="images/gym.png" class="buildings-modal" alt="Gym">
+        <!-- <p>In the Gym, you can discover an assortment of workouts and meditation exercises, and you can receive randomized workout sessions for many different target areas and goals.</p> -->
+        <p>In the Gym, you can discover an assortment of workouts and meditation exercises.</p>
+        <p><b>Do you want to go to the Gym?</b></p>
+        <a id="gymA" class="mapA" href="gym.html"><button id="gymBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+
+    <a href="#top"><img src="images/library.png" class="buildings incomplete" id="libraryBuilding" alt="Library" onclick="libraryBuildingFunc()"></a>
+    <div id="libraryModal" class="modal">
+      <div class="modalContent">
+        <span id="libraryClose" class="close" onclick="libraryCloseFunc()">&times</span>
+        <h2>Library</h2>
+        <img src="images/library.png" class="buildings-modal" alt="Library">
+        <!-- <p>In the Library, you can read short stories from a variety of genres, and if you run out of stories to read, you can also generate new, randomized short stories.</p> -->
+        <p>In the Library, you can read short stories from a variety of genres.</p>
+        <p><b>Do you want to go to the Library?</b></p>
+        <a id="libraryA" class="mapA" href="library.html"><button id="libraryBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+
+    <a href="#top"><img src="images/museum.png" class="buildings incomplete" id="museumBuilding" alt="Museum" onclick="museumBuildingFunc()"></a>
+    <div id="museumModal" class="modal">
+      <div class="modalContent">
+        <span id="museumClose" class="close" onclick="museumCloseFunc()">&times</span>
+        <h2>Museum</h2>
+        <img src="images/museum.png" class="buildings-modal" alt="Museum">
+        <!-- <p>In the Museum, you can explore multiple sections dedicated to many different topics, and you can learn about an assorted collection of interesting artifacts within each of the sections.</p> -->
+        <p>In the Museum, you can explore multiple sections dedicated to many different topics, and you can learn about an assorted collection of interesting artifacts within each of the sections.</p>
+        <p><b>Do you want to go to the Museum?</b></p>
+        <a id="museumA" class="mapA" href="museum.html"><button id="museumBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+
+    <a href="#top"><img src="images/arcade.png" class="buildings incomplete" id="arcadeBuilding" alt="Arcade" onclick="arcadeBuildingFunc()"></a>
+    <div id="arcadeModal" class="modal">
+      <div class="modalContent">
+        <span id="arcadeClose" class="close" onclick="arcadeCloseFunc()">&times</span>
+        <h2>Arcade</h2>
+        <img src="images/arcade.png" class="buildings-modal" alt="Arcade">
+        <!-- <p>In the Arcade, you can have some fun by playing a variety of entertaining mobile and computer games.</p> -->
+        <p>In the Arcade, you can have some fun by playing a variety of entertaining mobile and computer games.</p>
+        <p><b>Do you want to go to the Arcade?</b></p>
+        <a id="arcadeA" class="mapA" href="arcade.html"><button id="arcadeBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+
+    <a href="#top"><img src="images/musicStore.png" class="buildings" id="musicStoreBuilding" alt="Music Store" onclick="musicStoreBuildingFunc()"></a>
+    <div id="musicStoreModal" class="modal">
+      <div class="modalContent">
+        <span id="musicStoreClose" class="close" onclick="musicStoreCloseFunc()">&times</span>
+        <h2>Music Store</h2>
+        <img src="images/musicStore.png" class="buildings-modal" alt="Music Store">
+        <!-- <p>In the Music Store, you can listen to music from a variety of genres and an assortment of relaxing sounds.</p> -->
+        <p>In the Music Store, you can listen to music from a variety of genres and an assortment of relaxing sounds.</p>
+        <p><b>Do you want to go to the Music Store?</b></p>
+        <a id="musicStoreA" class="mapA" href="musicStore.html"><button id="musicStoreBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+
+    <a href="#top"><img src="images/zoo.png" class="buildings incomplete" id="zooBuilding" alt="Zoo" onclick="zooBuildingFunc()"></a>
+    <div id="zooModal" class="modal">
+      <div class="modalContent">
+        <span id="zooClose" class="close" onclick="zooCloseFunc()">&times</span>
+        <h2>Zoo</h2>
+        <img src="images/zoo.png" class="buildings-modal" alt="Zoo">
+        <!-- <p>In the Zoo, you can explore a gallery of filled with pictures of different animals and plants, and you can visit a variety of habitats and environments.</p> -->
+         <p>In the Zoo, you can explore a gallery filled with pictures of different animals and plants, and you can visit a variety of habitats and environments.</p>
+        <p><b>Do you want to go to the Zoo?</b></p>
+        <a id="zooA" class="mapA" href="zoo.html"><button id="zooBtn" class="mapBtn">Yes!</button></a>
+      </div>
+    </div>
+    
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
